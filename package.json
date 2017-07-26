@@ -1,35 +1,57 @@
 {
-  "name": "ngrx-query",
-  "version": "0.1.8",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/oleosjo/ngrx-query.git"
+  "_args": [
+    [
+      {
+        "raw": "ngrx-query@^0.1.8",
+        "scope": null,
+        "escapedName": "ngrx-query",
+        "name": "ngrx-query",
+        "rawSpec": "^0.1.8",
+        "spec": ">=0.1.8 <0.2.0",
+        "type": "range"
+      },
+      "/Users/mcdij/worktrip-fe-new"
+    ]
+  ],
+  "_from": "ngrx-query@>=0.1.8 <0.2.0",
+  "_id": "ngrx-query@0.1.8",
+  "_inCache": true,
+  "_location": "/ngrx-query",
+  "_nodeVersion": "6.9.1",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/ngrx-query-0.1.8.tgz_1496166770495_0.10663869045674801"
   },
-  "license": "MIT",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
-  "jsnext:main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "npm run build:lib && npm run build:demo",
-    "build:demo": "rimraf dist/demo && ng build",
-    "build:lib": "rimraf dist/lib && ngc && copyfiles package.json README.md LICENSE dist/",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e",
-    "pub": "npm run pub:lib && npm run pub:demo",
-    "pub:demo": "npm run build:demo -- --base-href /ngrx-query/ && gh-pages -d dist/demo",
-    "pub:lib": "npm run build:lib && npm publish dist",
-    "pack:lib": "npm run build:lib && cd dist && npm pack && copyfiles *.tgz ../ && cd .. && rimraf dist/*.tgz"
+  "_npmUser": {
+    "name": "isaacplmann",
+    "email": "isaacplmann+npm@gmail.com"
   },
-  "private": false,
-  "peerDependencies": {
-    "@angular/core": "^2.4.10",
-    "@ngrx/effects": "^4.0.1",
-    "@ngrx/store": "^4.0.0"
+  "_npmVersion": "4.0.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "ngrx-query@^0.1.8",
+    "scope": null,
+    "escapedName": "ngrx-query",
+    "name": "ngrx-query",
+    "rawSpec": "^0.1.8",
+    "spec": ">=0.1.8 <0.2.0",
+    "type": "range"
   },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/ngrx-query/-/ngrx-query-0.1.8.tgz",
+  "_shasum": "87f3b809b59cb71bad8ec75aeb7c280dc1ea01a5",
+  "_shrinkwrap": null,
+  "_spec": "ngrx-query@^0.1.8",
+  "_where": "/Users/mcdij/worktrip-fe-new",
+  "bugs": {
+    "url": "https://github.com/isaacplmann/ngrx-query/issues"
+  },
+  "dependencies": {
+    "redux-query": "1.x"
+  },
+  "description": "`ngrx-query` is a library for querying and managing network state in [Angular (2+)](https://angular.io) applications that use [ngrx](https://github.com/ngrx/store).  It is a port of the [redux-query](https://github.com/amplitude/redux-query) library - man",
   "devDependencies": {
     "@angular/cli": "1.0.0-rc.2",
     "@angular/common": "^4.0.1",
@@ -40,9 +62,10 @@
     "@angular/platform-browser": "^4.0.1",
     "@angular/platform-browser-dynamic": "^4.0.1",
     "@angular/router": "^4.0.1",
-    "@ngrx/effects": "^4.0.1",
-    "@ngrx/store": "^4.0.0",
-    "@ngrx/store-devtools": "^4.0.0",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/effects": "^2.0.2",
+    "@ngrx/store": "^2.2.1",
+    "@ngrx/store-devtools": "^3.2.4",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
@@ -64,10 +87,53 @@
     "rxjs": "^5.2.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
-    "typescript": "~2.4.2",
+    "typescript": "~2.2.1",
     "zone.js": "^0.8.4"
   },
-  "dependencies": {
-    "redux-query": "1.x"
-  }
+  "directories": {},
+  "dist": {
+    "shasum": "87f3b809b59cb71bad8ec75aeb7c280dc1ea01a5",
+    "tarball": "https://registry.npmjs.org/ngrx-query/-/ngrx-query-0.1.8.tgz"
+  },
+  "homepage": "https://github.com/isaacplmann/ngrx-query#readme",
+  "jsnext:main": "lib/index.js",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "name": "isaacplmann",
+      "email": "isaacplmann+npm@gmail.com"
+    }
+  ],
+  "module": "lib/index.js",
+  "name": "ngrx-query",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "@angular/core": "^2.4.10",
+    "@ngrx/core": "^1.2.0",
+    "@ngrx/effects": "^2.0.1",
+    "@ngrx/store": "^2.2.1"
+  },
+  "private": false,
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/isaacplmann/ngrx-query.git"
+  },
+  "scripts": {
+    "build": "npm run build:lib && npm run build:demo",
+    "build:demo": "rimraf dist/demo && ng build",
+    "build:lib": "rimraf dist/lib && ngc && copyfiles package.json README.md LICENSE dist/",
+    "e2e": "ng e2e",
+    "lint": "ng lint",
+    "ng": "ng",
+    "pack:lib": "npm run build:lib && cd dist && npm pack && copyfiles *.tgz ../ && cd .. && rimraf dist/*.tgz",
+    "pub": "npm run pub:lib && npm run pub:demo",
+    "pub:demo": "npm run build:demo -- --base-href /ngrx-query/ && gh-pages -d dist/demo",
+    "pub:lib": "npm run build:lib && npm publish dist",
+    "start": "ng serve",
+    "test": "ng test"
+  },
+  "types": "lib/index.d.ts",
+  "version": "0.1.8"
 }
