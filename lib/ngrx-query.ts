@@ -3,25 +3,13 @@ import { ConnectRequestDirective } from './directives/connect.directive';
 import { NGRX_QUERY_CONFIG } from './helpers/config';
 import { ConnectService } from './services/connect.service';
 import { NgrxQueryEffects } from './services/effects.service';
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
-export const NgrxQueryModule = (function () {
-    function NgrxQueryModule() {
-    }
-    /* optional: in case you need users to override your providers */
-    NgrxQueryModule.forRoot = function (config) {
-        return {
-            ngModule: NgrxQueryModule,
-            providers: [
-                { provide: NGRX_QUERY_CONFIG, useValue: config },
-                ConnectService,
-                ConnectEntityService,
-            ],
-        };
-    };
-    return NgrxQueryModule;
-}());
-NgrxQueryModule.decorators = [
+
+@NgModule({
+})
+export class NgrxQueryModule {
+  static decorators = [
     { type: NgModule, args: [{
                 declarations: [
                     ConnectRequestDirective,
@@ -34,6 +22,17 @@ NgrxQueryModule.decorators = [
                 ],
             },] },
 ];
-/** @nocollapse */
-NgrxQueryModule.ctorParameters = function () { return []; };
-//# sourceMappingURL=ngrx-query.js.map
+
+  /* optional: in case you need users to override your providers or providers need to be singletons */
+  static forRoot(config): ModuleWithProviders {
+    return {
+            ngModule: NgrxQueryModule,
+            providers: [
+                { provide: NGRX_QUERY_CONFIG, useValue: config },
+                ConnectService,
+                ConnectEntityService,
+            ],
+    };
+  }
+
+}
